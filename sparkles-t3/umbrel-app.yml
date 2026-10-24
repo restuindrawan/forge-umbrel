@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: sparkles-t3
+storage:
+  dataRoot: data
+name: T3 Code
+tagline: Control your coding agents from anywhere
+icon: https://t3.codes/favicon.ico
+category: Development
+version: "0.1.2"
+port: 4098
+description: >-
+  T3 Code is a self-hosted control surface for coding agents such as Codex,
+  Claude Code, and OpenCode. This app runs the T3 Code server on your umbrelOS
+  device so you can connect from the web, desktop, or mobile app.
+
+
+  Provider accounts are set up from T3 Code's Settings page after install.
+  Project files go in the projects folder.
+
+developer: T3 Tools
+website: https://t3.codes
+submitter: Sparkles
+submission: https://github.com/pingdotgg/t3code
+repo: https://github.com/pingdotgg/t3code
+support: https://github.com/pingdotgg/t3code/issues
+gallery: []
+releaseNotes: >-
+  Initial Umbrel packaging for T3 Code 0.1.2.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
