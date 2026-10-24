@@ -1,0 +1,36 @@
+manifestVersion: 1
+id: sparkles-seanime
+storage:
+  dataRoot: data
+name: Seanime
+tagline: Media server for anime and manga
+icon: https://seanime.app/seanime-logo.png
+category: media
+version: "3.10.4"
+port: 4099
+description: >-
+  Seanime is a self-hosted media server for anime and manga. It scans your
+  local library, tracks your AniList progress, and streams with on-the-fly
+  transcoding.
+
+
+  This app uses the umagistr/seanime community image with the hardware
+  acceleration build, passing the AMD GPU through /dev/dri. In Seanime's
+  transcoding settings, pick the VAAPI device /dev/dri/renderD128.
+
+  Put your anime in the anime folder and downloads in the downloads folder
+  inside the app's data directory.
+
+developer: 5rahim
+website: https://seanime.app
+submitter: Sparkles
+submission: https://hub.docker.com/r/umagistr/seanime
+repo: https://github.com/5rahim/seanime
+support: https://github.com/5rahim/seanime/issues
+gallery: []
+releaseNotes: >-
+  Initial Umbrel packaging for Seanime 3.10.4 (hwaccel build).
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

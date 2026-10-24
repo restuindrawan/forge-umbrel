@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: sparkles-seanime_server_1
+      APP_PORT: 43211
+
+  server:
+    image: umagistr/seanime:v3.10.4-hwaccel
+    user: "1000:1000"
+    init: true
+    restart: on-failure
+    # 991 = render (renderD128), 44 = video (card0)
+    group_add:
+      - "991"
+      - "44"
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/home/seanime/.config/Seanime
+      - ${APP_DATA_DIR}/data/anime:/anime
+      - ${APP_DATA_DIR}/data/downloads:/downloads
