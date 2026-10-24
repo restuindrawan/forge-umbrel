@@ -18,4 +18,5 @@ services:
       HOME: /home/opencode
     volumes:
       - ${APP_DATA_DIR}/data/opencode:/home/opencode/
-    working_dir: /home/opencode/projects
+    working_dir: /home/opencode/projects    ports:
+      - "4097:4096"
