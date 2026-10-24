@@ -1,6 +1,6 @@
 FROM node:22-bookworm-slim
 
-ARG T3_VERSION=0.1.3-nightly.20261024.3604
+ARG T3_VERSION=0.1.2
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends git ca-certificates curl \
