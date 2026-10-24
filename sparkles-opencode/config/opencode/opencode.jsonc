@@ -1,0 +1,5 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Umbrel handles image updates, so disable in-app update checks.
+  "update": "disable",
+}

@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: sparkles-opencode
+name: OpenCode
+tagline: Open source AI coding agent
+icon: https://opencode.ai/favicon.svg
+category: Development
+version: "2.0.0"
+port: 4096
+description: >-
+  OpenCode is an open source AI coding agent. This app runs the OpenCode V2
+  server and web interface on your umbrelOS device.
+
+
+  Global configuration lives in the app's data folder at
+  data/config/opencode/opencode.jsonc. Project files go in the workspace folder.
+
+developer: OpenCode
+website: https://opencode.ai
+submitter: Sparkles
+submission: https://github.com/anomalyco/opencode
+repo: https://github.com/anomalyco/opencode
+support: https://github.com/anomalyco/opencode/issues
+gallery: []
+releaseNotes: >-
+  Initial Umbrel packaging for OpenCode V2.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

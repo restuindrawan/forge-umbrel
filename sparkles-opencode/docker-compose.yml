@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: sparkles-opencode_server_1
+      APP_PORT: 4096
+
+  server:
+    image: ghcr.io/anomalyco/opencode:2.0.0
+    user: "1000:1000"
+    init: true
+    restart: unless-stopped
+    command: serve --hostname 0.0.0.0 --port 4096
+    environment:
+      OPENCODE_PASSWORD: ${APP_PASSWORD}
+      XDG_CONFIG_HOME: /data/config
+      XDG_DATA_HOME: /data/share
+      XDG_STATE_HOME: /data/state
+      XDG_CACHE_HOME: /data/cache
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/workspace:/workspace
+    working_dir: /workspace
