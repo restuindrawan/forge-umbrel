@@ -31,7 +31,7 @@ jobs:
           context: sparkles-t3/image
           platforms: linux/amd64
           push: true
-          build-args: T3_VERSION=0.1.2
+          build-args: T3_VERSION=0.1.3-nightly.20261024.3604
           tags: |
-            ghcr.io/restuindrawan/sparkles-t3:0.1.2
-            ghcr.io/restuindrawan/sparkles-t3:latest
+            ghcr.io/restuindrawan/sparkles-t3:0.1.3-nightly.20261024.3604
+            ghcr.io/restuindrawan/sparkles-t3:nightly
