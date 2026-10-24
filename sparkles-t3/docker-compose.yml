@@ -9,7 +9,7 @@ services:
       APP_PORT: 3773
 
   server:
-    image: ghcr.io/restuindrawan/sparkles-t3:0.1.2
+    image: ghcr.io/restuindrawan/sparkles-t3:0.1.2-1
     user: "1000:1000"
     init: true
     restart: on-failure
