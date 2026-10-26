@@ -33,5 +33,5 @@ jobs:
           push: true
           build-args: T3_VERSION=0.1.2
           tags: |
-            ghcr.io/restuindrawan/sparkles-t3:0.1.2-1
+            ghcr.io/restuindrawan/sparkles-t3:0.1.2-2
             ghcr.io/restuindrawan/sparkles-t3:latest

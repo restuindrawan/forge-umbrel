@@ -9,14 +9,16 @@ services:
       APP_PORT: 3773
 
   server:
-    image: ghcr.io/restuindrawan/sparkles-t3:0.1.2-1
+    image: ghcr.io/restuindrawan/sparkles-t3:0.1.2-2
     user: "1000:1000"
     init: true
     restart: on-failure
     environment:
       HOME: /home/node
+      T3_PUBLIC_HOST: ${DEVICE_DOMAIN_NAME}
+      T3_PUBLIC_PORT: "4100"
     volumes:
       - ${APP_DATA_DIR}/data/t3:/home/node/
     working_dir: /home/node/projects
     ports:
-      - "4098:3773"
+      - "4100:3773"

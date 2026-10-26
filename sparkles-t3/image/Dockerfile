@@ -7,7 +7,10 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* \
   && npm install -g t3@${T3_VERSION}
 
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY t3-pair /usr/local/bin/t3-pair
+
 USER 1000:1000
 WORKDIR /home/node/projects
 
-ENTRYPOINT ["t3", "serve", "--mode", "web", "--host", "0.0.0.0", "--port", "3773", "--no-browser"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

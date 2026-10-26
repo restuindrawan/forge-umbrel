@@ -1,0 +1,11 @@
+#!/bin/sh
+# Print a one-time pairing link for connecting another device to this server.
+# Usage: t3-pair [ttl]   (default 1h)
+PORT="${T3CODE_PORT:-3773}"
+PUBLIC_HOST="${T3_PUBLIC_HOST:-umbrel.local}"
+PUBLIC_PORT="${T3_PUBLIC_PORT:-$PORT}"
+
+exec t3 auth pairing create \
+  --ttl "${1:-1h}" \
+  --label "umbrel-$(date +%Y%m%d-%H%M%S)" \
+  --base-url "http://${PUBLIC_HOST}:${PUBLIC_PORT}"

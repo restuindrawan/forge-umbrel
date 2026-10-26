@@ -6,7 +6,7 @@ name: OpenCode
 tagline: Open source AI coding agent
 icon: https://opencode.ai/favicon.svg
 category: Development
-version: "2.1.4"
+version: "2.1.4-1"
 port: 4096
 description: >-
   OpenCode is an open source AI coding agent. This app runs the OpenCode V2
@@ -16,6 +16,11 @@ description: >-
   Global configuration lives at .config/opencode/opencode.jsonc in the app's
   data folder. Project files go in the projects folder.
 
+
+  The server is protected by a fixed password (username "opencode") shown in
+  the app's credentials. To attach a terminal from another device, run:
+  OPENCODE_PASSWORD=<password> opencode --server http://<your-umbrel-address>:4097
+
 developer: OpenCode
 website: https://opencode.ai
 submitter: Sparkles
@@ -24,8 +29,9 @@ repo: https://github.com/anomalyco/opencode
 support: https://github.com/anomalyco/opencode/issues
 gallery: []
 releaseNotes: >-
-  Initial Umbrel packaging for OpenCode V2.
+  Use a fixed server password so remote clients can connect. Previously OpenCode generated a new random password on every start.
 dependencies: []
 path: ""
-defaultUsername: ""
+deterministicPassword: true
+defaultUsername: "opencode"
 defaultPassword: ""
