@@ -6,7 +6,7 @@ name: T3 Code
 tagline: Control your coding agents from anywhere
 icon: https://t3.codes/favicon.ico
 category: Development
-version: "0.1.2-2"
+version: "0.1.2-3"
 port: 4098
 description: >-
   T3 Code is a self-hosted control surface for coding agents such as Codex,
@@ -20,7 +20,17 @@ description: >-
   "docker exec sparkles-t3_server_1 t3-pair" over SSH to create a new one.
 
 
-  Provider accounts are set up from T3 Code's Settings page after install.
+  Claude Code, Codex, and OpenCode are preinstalled in the container. Sign in
+  once over SSH, then enable the provider in T3 Code under Settings > Providers.
+  Logins are kept in the app's data folder.
+
+  docker exec -it sparkles-t3_server_1 claude auth login
+
+  docker exec -it sparkles-t3_server_1 codex login --device-auth
+
+  docker exec -it sparkles-t3_server_1 opencode auth login
+
+
   Project files go in the projects folder.
 
 developer: T3 Tools
@@ -31,8 +41,10 @@ repo: https://github.com/pingdotgg/t3code
 support: https://github.com/pingdotgg/t3code/issues
 gallery: []
 releaseNotes: >-
-  Fixes remote access: the direct connection port is now 4100 (it used to
-  clash with the app proxy on 4098), and a pairing link is printed on startup.
+  Adds Claude Code, Codex, and OpenCode to the image so T3 Code finds a
+  provider out of the box. Also includes the remote access fixes: the direct
+  connection port is now 4100 (it used to clash with the app proxy on 4098),
+  and a pairing link is printed on startup.
 dependencies: []
 path: ""
 defaultUsername: ""
